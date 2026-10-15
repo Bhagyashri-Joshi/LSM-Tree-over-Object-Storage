@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #e2e8f0; background: #0b0f14; font-synthesis: none; }
+* { box-sizing: border-box; }
+html, body, #root { min-width: 320px; min-height: 100%; margin: 0; }
+button, input { font: inherit; }
+.canvas-control { display: grid; height: 25px; width: 25px; place-items: center; border: 1px solid #26323f; border-radius: 4px; background: #111820; color: #94a3b8; cursor: pointer; }
+.canvas-control:hover { border-color: #475569; color: #e2e8f0; }
+.flow-path { stroke-dasharray: 7 5; animation: flow-dash 900ms linear infinite; }
+.flow-failed { animation-duration: 450ms; }
+@keyframes flow-dash { to { stroke-dashoffset: -24; } }
+@media (prefers-reduced-motion: reduce) { .flow-path { animation: none; } }
